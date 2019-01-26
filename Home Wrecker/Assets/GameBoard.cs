@@ -16,15 +16,34 @@ public class GameBoard : MonoBehaviour
         Board();
     }
 
-    private void Board()
+    private void Update()
+    {
+        
+    }
+
+    private void Board(int[] Map)
     {
         for (int xx = 0; xx < width; xx++)
         {
             for (int yy = 0; yy < height; yy++)
             {
                 Vector2 position = new Vector2(xx, yy);
+                Map[xx] = Map[yy];
                 Instantiate(Tiles[Random.Range(0,7)], position, Quaternion.identity);
+
+                Debug.Log(Map);
             }
         }
+
     }
+
+    private void Sweep()
+    {
+
+    }
+
+
+    
+
+
 }
