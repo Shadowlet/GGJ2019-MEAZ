@@ -8,10 +8,11 @@ public class GameBoard : MonoBehaviour
     public int width;
     public GameObject gameTiles;
     public Gametiles[,] tiles; //this is what holds the prefabs for the tiles
+    public int[] array;
 
     void Start()
     {
-        tiles = new Gametiles[height, width];
+        tiles = new Gametiles[width,height];
         Board(); 
     }
 
