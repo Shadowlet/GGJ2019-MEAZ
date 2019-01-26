@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         menu.SetActive(true);
-        game.SetActive(false);
+        game.SetActive(true);
         instructions.SetActive(false);
         gameOver.SetActive(false);
     }
