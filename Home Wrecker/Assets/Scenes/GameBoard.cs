@@ -11,7 +11,7 @@ public class GameBoard : MonoBehaviour
 
     void Start()
     {
-        tiles = new background[height, width];
+        tiles = new Gametiles[height, width];
         Board(); 
     }
 
