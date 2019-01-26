@@ -8,12 +8,12 @@ public class GameBoard : MonoBehaviour
     public int width;
     public GameObject gameTiles;
     public Gametiles[,] tiles; //this is what holds the prefabs for the tiles
-    public int[] array;
+    public GameObject[] Tiles;
 
     void Start()
     {
         tiles = new Gametiles[width,height];
-        Board(); 
+        Board();
     }
 
     private void Board()
@@ -23,7 +23,7 @@ public class GameBoard : MonoBehaviour
             for (int yy = 0; yy < height; yy++)
             {
                 Vector2 position = new Vector2(xx, yy);
-                Instantiate(gameTiles, position, Quaternion.identity);
+                Instantiate(Tiles[Random.Range(0,7)], position, Quaternion.identity);
             }
         }
     }
